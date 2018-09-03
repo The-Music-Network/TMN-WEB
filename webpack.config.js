@@ -2,12 +2,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const path = require("path");
 
+require("dotenv").config();
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: "../src/main.js",
-  modules: {
+  mode: process.env.NODE_ENV,
+  entry: "./src/main.js",
+  module: {
     rules: [
       {
         test: /\.jsx?$/,
@@ -15,7 +18,9 @@ module.exports = {
         use: [
           {
             loader: "babel-loader",
-            options: { presets: ["es2015"], plugins: ["transform-vue-jsx"] }
+            options: {
+              presets: ["@babel/env"]
+            }
           }
         ]
       },
@@ -31,7 +36,12 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          {
+            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "./dist/index.html"
+            }
+          },
           "css-loader",
           "sass-loader"
         ]
@@ -43,7 +53,9 @@ module.exports = {
       filename: devMode ? "[name].css" : "[name].[hash].css",
       chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      title: "The Music Network"
+    })
   ],
   optimization: {
     minimizer: [
@@ -54,5 +66,11 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({})
     ]
+  },
+  devServer: {
+    hot: true,
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 8080
   }
 };

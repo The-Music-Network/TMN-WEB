@@ -1,4 +1,3 @@
 {
-  "presets": ["@babel/env", "vue-app"],
-  "plugins": ["transform-vue-jsx"]
+  "presets": ["@babel/env"]
 }
