@@ -7,6 +7,22 @@ Please refer to the wiki page here on github.
 * Fork this repository
 * run ```npm install``` in a command line inside of the repo's main directory
 * run ```npm dev``` to start the dev server
+### Syntax
+Please use this JSX syntax in your Vue components to keep all files cleaner:
+```javascript export default {
+  render () {
+    return (
+      <input
+        onKeyup:up={this.methodForPressingUp}
+        onKeyup:down={this.methodForPressingDown}
+        onKeyup:bare-shift-enter={this.methodOnlyOnShiftEnter}
+        onKeyup:bare-alt-enter={this.methodOnlyOnAltEnter}
+      />
+    )
+  }
+}
+```
+
 ## Style Guide
 ### SCSS
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
