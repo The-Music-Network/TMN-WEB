@@ -1,5 +1,8 @@
 # The Music Network Frontend
 Please refer to the wiki page here on github.
+## Requirements
+* node 8+
+* npm or yarn installed
 ## Instructions
 * Fork this repository
 * run ```npm install``` in a command line inside of the repo's main directory
