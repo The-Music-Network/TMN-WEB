@@ -1,4 +1,5 @@
 # The Music Network Frontend
+Please refer to the wiki page here on github.
 ## Style Guide
 ### SCSS
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
