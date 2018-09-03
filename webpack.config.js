@@ -10,6 +10,10 @@ const devMode = process.env.NODE_ENV !== "production";
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: "./src/main.js",
+  node: {
+    fs: "empty",
+    child_process: "empty"
+  },
   module: {
     rules: [
       {
@@ -26,6 +30,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: "file-loader",
@@ -35,6 +40,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -54,7 +60,7 @@ module.exports = {
       chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
     }),
     new HtmlWebpackPlugin({
-      title: "The Music Network"
+      template: "public/index.html"
     })
   ],
   optimization: {
@@ -66,11 +72,13 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({})
     ]
-  },
-  devServer: {
-    hot: true,
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 8080
   }
+  // devServer: {
+  //   contentBase: path.join(__dirname, "dist"),
+  //   hot: true,
+  //   warnings: true,
+  //   errors: true,
+  //   compress: true,
+  //   port: 8080
+  // }
 };
