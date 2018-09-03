@@ -6,7 +6,7 @@ Please refer to the wiki page here on github.
 ## Instructions
 * Fork this repository
 * run ```npm install``` in a command line inside of the repo's main directory
-* run ```npm dev``` to start the dev server
+* run ```npm run dev``` to start the dev server
 ### Syntax
 Please use this JSX syntax in your Vue components to keep all files cleaner:
 ```javascript export default {
