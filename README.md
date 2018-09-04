@@ -4,7 +4,7 @@ Please refer to the wiki page here on github.
 * node 8+
 * npm or yarn installed
 ## Instructions
-* Fork this repository
+* Fork this repository first and then clone, DO NOT clone the repository directly.
 * run ```npm install``` in a command line inside of the repo's main directory
 * run ```npm run dev``` to start the dev server
 ### Syntax
