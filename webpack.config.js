@@ -23,7 +23,8 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/env"]
+              presets: ["@babel/env"],
+              plugins: ["jsx-event-modifiers", "transform-vue-jsx"]
             }
           }
         ]
@@ -73,12 +74,4 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({})
     ]
   }
-  // devServer: {
-  //   contentBase: path.join(__dirname, "dist"),
-  //   hot: true,
-  //   warnings: true,
-  //   errors: true,
-  //   compress: true,
-  //   port: 8080
-  // }
 };
