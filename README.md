@@ -11,7 +11,7 @@ Please refer to the wiki page here on github.
 ```sass
  @import "path/to/your/sass/file";
 ```
-This is so webpack can inject all of our sass into index.html for us.
+* remember to add a .env file and copy the contents of .env-example into it
 ### Syntax
 Please use this JSX syntax in your Vue components to keep all files cleaner:
 ```javascript 
