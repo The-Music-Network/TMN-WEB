@@ -2,6 +2,6 @@ import Vue from "vue";
 
 export default Vue.component("App", {
   render: function(h) {
-    return <div>Hello World</div>;
+    return <div id="test">Hello World</div>;
   }
 });

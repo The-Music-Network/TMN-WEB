@@ -9,7 +9,10 @@ const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: "./src/main.js",
+  entry: {
+    main: "./src/main.js",
+    styles: "./public/styles/index.scss"
+  },
   node: {
     fs: "empty",
     child_process: "empty"
@@ -43,12 +46,8 @@ module.exports = {
         test: /\.scss$/,
         exclude: [/node_modules/],
         use: [
-          {
-            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "./dist/index.html"
-            }
-          },
+          "css-hot-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader"
         ]

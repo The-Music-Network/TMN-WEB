@@ -1,5 +1,5 @@
 import Vue from "vue";
-import App from "./app.jsx";
+import App from "./App.jsx";
 // import store from "./store";
 
 new Vue({
