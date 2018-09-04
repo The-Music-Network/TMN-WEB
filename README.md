@@ -9,18 +9,14 @@ Please refer to the wiki page here on github.
 * run ```npm run dev``` to start the dev server
 ### Syntax
 Please use this JSX syntax in your Vue components to keep all files cleaner:
-```javascript export default {
-  render () {
-    return (
-      <input
-        onKeyup:up={this.methodForPressingUp}
-        onKeyup:down={this.methodForPressingDown}
-        onKeyup:bare-shift-enter={this.methodOnlyOnShiftEnter}
-        onKeyup:bare-alt-enter={this.methodOnlyOnAltEnter}
-      />
-    )
+```javascript 
+import Vue from "vue";
+
+export default Vue.component("App", {
+  render: function(h) {
+    return <div>Hello World</div>;
   }
-}
+});
 ```
 
 ## Style Guide
