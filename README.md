@@ -4,9 +4,20 @@ Please refer to the wiki page here on github.
 * node 8+
 * npm or yarn installed
 ## Instructions
-* Fork this repository
+* Fork this repository first and then clone, DO NOT clone the repository directly.
 * run ```npm install``` in a command line inside of the repo's main directory
-* run ```npm dev``` to start the dev server
+* run ```npm run dev``` to start the dev server
+### Syntax
+Please use this JSX syntax in your Vue components to keep all files cleaner:
+```javascript 
+import Vue from "vue";
+
+export default Vue.component("App", {
+  render: function(h) {
+    return <div>Hello World</div>;
+  }
+});
+```
 ## Style Guide
 ### SCSS
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
