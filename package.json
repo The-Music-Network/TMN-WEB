@@ -4,7 +4,7 @@
   "description": "This is the Web app for The-Music-Network",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config ./build/webpack.config.js",
     "dev": "webpack-dev-server --open --watch --hot --warnings --errors"
   },
   "repository": {
