@@ -7,6 +7,11 @@ Please refer to the wiki page here on github.
 * Fork this repository first and then clone, DO NOT clone the repository directly.
 * run ```npm install``` in a command line inside of the repo's main directory
 * run ```npm run dev``` to start the dev server
+* Make sure that all scss files are kept inside of the public folder under "styles" and imported into index.scss like so:
+```sass
+ @import "path/to/your/sass/file";
+```
+* remember to add a .env file and copy the contents of .env-example into it
 ### Syntax
 Please use this JSX syntax in your Vue components to keep all files cleaner:
 ```javascript 
