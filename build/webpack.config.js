@@ -4,6 +4,8 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
+const path = require("path");
+
 require("dotenv").config();
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -56,6 +58,15 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      styles: path.join(__dirname, "public/styles"),
+      images: path.join(__dirname, "public/images"),
+      components: path.join(__dirname, "src/components"),
+      modules: path.join(__dirname, "src/modules"),
+      pages: path.join(__dirname, "src/pages")
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
