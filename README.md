@@ -12,17 +12,6 @@ Please refer to the wiki page here on github.
  @import "path/to/your/sass/file";
 ```
 * remember to add a .env file and copy the contents of .env-example into it
-### Syntax
-Please use this JSX syntax in your Vue components to keep all files cleaner:
-```javascript 
-import Vue from "vue";
-
-export default Vue.component("App", {
-  render: function(h) {
-    return <div>Hello World</div>;
-  }
-});
-```
 ## Style Guide
 ### SCSS
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
