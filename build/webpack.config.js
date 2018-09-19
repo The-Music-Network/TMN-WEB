@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const path = require("path");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 require("dotenv").config();
 const devMode = process.env.NODE_ENV !== "production";
@@ -20,17 +20,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: [/node_modules/],
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/env"],
-              plugins: ["jsx-event-modifiers", "transform-vue-jsx"]
-            }
-          }
-        ]
+        test: /\.vue$/,
+        loader: "vue-loader"
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -39,6 +30,18 @@ module.exports = {
           {
             loader: "file-loader",
             options: {}
+          }
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/env"]
+            }
           }
         ]
       },
@@ -61,7 +64,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "public/index.html"
-    })
+    }),
+    new VueLoaderPlugin()
   ],
   optimization: {
     minimizer: [
