@@ -58,11 +58,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      styles: path.join(__dirname, "public/styles"),
-      images: path.join(__dirname, "public/images"),
-      components: path.join(__dirname, "src/components"),
-      modules: path.join(__dirname, "src/modules"),
-      pages: path.join(__dirname, "src/pages")
+      styles: path.resolve(__dirname, "../public/styles"),
+      images: path.resolve(__dirname, "../public/images"),
+      components: path.resolve(__dirname, "../src/components"),
+      modules: path.resolve(__dirname, "../src/modules"),
+      pages: path.resolve(__dirname, "../src/pages")
     }
   },
   plugins: [
