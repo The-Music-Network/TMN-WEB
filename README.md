@@ -30,7 +30,7 @@ https://pptr.dev/ https://jestjs.io/en/ https://github.com/theRealScoobaSteve/ke
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
 * All css is required to be written in SASS, more specifically SCSS, if you are unfamiliar with SASS here is a quick guide. https://sass-lang.com/guid
 * All style sheets may be inlined using the 
-* ```vue 
+```html
 <style lang="scss">
     // your scss here
 </style>
