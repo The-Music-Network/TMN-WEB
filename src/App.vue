@@ -1,5 +1,15 @@
+<script>
+  import Navbar from  "components/navbar.vue";
+
+  export default {
+    components: {
+      Navbar
+    }
+  }
+</script>
+
 <template>
-  <div id="app">
-    Hello World
+  <div>
+    <navbar></navbar>
   </div>
 </template>
