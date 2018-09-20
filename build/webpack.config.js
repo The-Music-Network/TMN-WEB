@@ -4,7 +4,6 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const path = require("path");
 
-require("dotenv").config();
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
@@ -34,7 +33,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: [/node_modules/],
         use: [
           {

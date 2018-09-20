@@ -8,8 +8,14 @@ Please refer to the wiki page here on github.
 * run ```npm install``` in a command line inside of the repo's main directory
 * run ```npm run dev``` to start the dev server
 * Make sure that all scss files are kept inside of the public folder under "styles" and imported into index.scss like so:
+* There are a few aliases available via webpack to make pathing to your files easier. Every folder has its own
+alias, for example to automatically import the styles folder use:
 ```sass
- @import "path/to/your/sass/file";
+ @import "~styles/...";
+```
+* To import a component from the components folder use: 
+```javascript
+import myComponent from "~components/myComponent";
 ```
 * remember to add a .env file and copy the contents of .env-example into it
 ## Style Guide
