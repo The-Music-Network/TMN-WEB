@@ -1,5 +1,3 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const path = require("path");
@@ -8,9 +6,9 @@ const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: {
-    main: "./src/main.js",
-    styles: "./public/styles/index.scss"
+  entry: "./src/main.js",
+  output: {
+    filename: "build.js"
   },
   node: {
     fs: "empty",
@@ -47,12 +45,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: [/node_modules/],
-        use: [
-          "css-hot-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
+        use: ["vue-style-loader", "style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
@@ -65,14 +58,5 @@ module.exports = {
       pages: path.resolve(__dirname, "../src/pages")
     }
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: devMode ? "[name].css" : "[name].[hash].css",
-      chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
-    }),
-    new HtmlWebpackPlugin({
-      template: "public/index.html"
-    }),
-    new VueLoaderPlugin()
-  ],
+  plugins: [new VueLoaderPlugin()]
 };

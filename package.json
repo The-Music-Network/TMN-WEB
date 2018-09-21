@@ -10,7 +10,9 @@
     "build:client": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
     "test": "mocha",
     "test:show": "cross-env NODE_ENV=test:show mocha",
-    "test:slow": "cross-env NODE_ENV=test:slow mocha"
+    "test:slow": "cross-env NODE_ENV=test:slow mocha",
+    "start": "npm run build && npm run start:server",
+    "start:server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,6 @@
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "cross-env": "^5.2.0",
-    "css-hot-loader": "^1.4.2",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-plugin-prettier": "^2.6.2",
