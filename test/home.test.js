@@ -8,6 +8,6 @@ describe("Testing the home page", function() {
     const text = await kermit.getText(
       ".StaticLoggedOutHomePage-signupSubtitle"
     );
-    return expect(text).toEqual("Join Twitter today.");
+    return expect(text).equal("Join Twitter today.");
   });
 });
