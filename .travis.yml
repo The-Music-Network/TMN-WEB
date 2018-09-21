@@ -10,5 +10,4 @@ cache:
 
 script:
   - yarn install
-  - yarn start
-  - yarn test
+  - yarn start && yarn test
