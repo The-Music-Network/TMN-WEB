@@ -13,6 +13,8 @@ Please remember that all code will auto reformat with prettier on commit, so if 
 - Fork this repository first and then clone, DO NOT clone the repository directly.
 - run `npm install` in a command line inside of the repo's main directory
 - run `npm run dev` to start the dev server
+- Please refer to this video for syncing your fork https://www.youtube.com/watch?v=-zvHQXnBO6c
+- Please refer to this guide for branching off of develop, make sure when you push you add --no-ff https://stackoverflow.com/questions/4470523/create-a-branch-in-git-from-another-branch
 - Always create an issue before making a pull request to better document ideas and keep feature short and concise. If you do a bugfix, you should only
   have a PR with said bugfix, do NOT make a PR fixing multiple issues in one.
 - There are a few aliases available via webpack to make pathing to your files easier. Every folder has its own
@@ -31,7 +33,6 @@ import myComponent from "components/myComponent";
 - Please always try to use these aliases, as the codebase grows, it will be easy to move around folder structure if need be this way, all folders
   you will use will have an alias.
 - A good example to understand vue single file components can be found here https://vegibit.com/single-file-components-in-vuejs/
-- Please refer to this guide for branching off of develop, make sure when you push you add --no-ff https://stackoverflow.com/questions/4470523/create-a-branch-in-git-from-another-branch
 
 ## Testing
 
