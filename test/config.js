@@ -10,7 +10,7 @@ prepare(
     const slow = isSlow ? 100 : 0;
 
     global.kermit = await new Kermit({
-      headless: isShow,
+      headless: isShow || true,
       slowMo: slow
     });
     done();
