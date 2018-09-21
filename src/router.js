@@ -4,14 +4,9 @@ import Home from "pages/Home.vue";
 
 Vue.use(Router);
 
-export default function router() {
+export default function buildRouter() {
   return new Router({
-    routes: [
-      {
-        path: "/",
-        name: "home",
-        component: Home
-      }
-    ]
+    mode: "history",
+    routes: [{ path: "/", component: Home }]
   });
 }
