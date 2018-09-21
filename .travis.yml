@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "node"
+  - "8"
 
 cache:
   yarn: true,
@@ -13,6 +13,6 @@ install:
   - yarn build
 
 script:
-  - nohup yarn start
+  - nohup yarn start &
   - sleep 3
   - yarn test
