@@ -4,6 +4,10 @@ describe("Testing the home page", function() {
   this.timeout(0);
 
   it("should load", async function() {
-    return await kermit.goto("http://twitter.com");
+    await kermit.goto("https://twitter.com");
+    const text = await kermit.getText(
+      ".StaticLoggedOutHomePage-signupSubtitle"
+    );
+    return expect(text).toEqual("Join Twitter today.");
   });
 });
