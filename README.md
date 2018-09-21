@@ -20,11 +20,10 @@ import myComponent from "components/myComponent";
 ```
 * Please always try to use these aliases, as the codebase grows, it will be easy to move around folder structure if need be this way, all folders
 you will use will have an alias.
-* remember to add a .env file and copy the contents of .env-example into it
 * A good example to understand vue single file components can be found here https://vegibit.com/single-file-components-in-vuejs/
 ## Testing
-* All features should have a unit test within __tests__, we use jest and kermit (a team created puppeteer wrapper). The docs for each can be found here:
-https://pptr.dev/ https://jestjs.io/en/ https://github.com/theRealScoobaSteve/kermit-pptr
+* All features should have a unit test within tests folder, we use jest and kermit (a team created puppeteer wrapper). The docs for each can be found here:
+https://pptr.dev/ https://mochajs.org/ https://www.chaijs.com/ https://github.com/theRealScoobaSteve/kermit-pptr
 ## Style Guide
 ### SCSS
 * For this project we use BEM css. Here is a great article if you are unfamiliar with BEM style guide https://css-tricks.com/bem-101/
