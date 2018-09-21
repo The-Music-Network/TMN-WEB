@@ -5,10 +5,10 @@ const path = require("path");
 const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  mode: process.env.NODE_ENV,
-  entry: "./src/main.js",
+  entry: "./src/client.js",
+  mode: process.env.NODE_ENV || "development",
   output: {
-    filename: "build.js"
+    filename: "main.js"
   },
   node: {
     fs: "empty",
@@ -31,7 +31,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: [/node_modules/],
         use: [
           {

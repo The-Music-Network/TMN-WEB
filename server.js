@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const bundle = require("./dist/server.bundle.js");
+const bundle = require("./client/server.bundle.js");
 
 const app = express();
 const renderer = require("vue-server-renderer").createRenderer({
@@ -9,6 +9,7 @@ const renderer = require("vue-server-renderer").createRenderer({
 });
 
 app.use("./dist", express.static(path.join(__dirname, "./dist")));
+app.use("./dist", express.static(path.join(__dirname, "./client")));
 
 app.get("*", (req, res) => {
   bundle.default({ url: req.url }).then(

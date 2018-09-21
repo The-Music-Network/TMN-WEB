@@ -1,7 +1,14 @@
 <script>
 import Navbar from "components/navbar.vue";
 
-export default {};
+export default {
+  data: {
+    title: "The Music Network",
+    meta: `
+                <meta charset="UTF-8">
+            `
+  }
+};
 </script>
 
 <template>
