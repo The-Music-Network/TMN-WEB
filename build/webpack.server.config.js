@@ -9,6 +9,7 @@ module.exports = merge(base, {
   },
   devtool: false,
   output: {
+    path: path.resolve(__dirname, "../client"),
     filename: "server.bundle.js",
     libraryTarget: "commonjs2"
   },
