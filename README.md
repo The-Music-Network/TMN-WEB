@@ -61,6 +61,7 @@ import myComponent from "components/myComponent";
 
 ```html
 <style lang="scss">
+@import "styles/index.scss"
     // your scss here
 </style>
 ```
