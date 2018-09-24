@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Login v-on:loginCredentials="checkCredentials"></Login>
+        <Login :errorMessage="errorMessage" v-on:loginCredentials="checkCredentials"></Login>
     </div>
 </template>
 
@@ -12,15 +12,18 @@ export default {
     Login: Login
   },
   data() {
-    return {};
+    return {
+      errorMessage: ""
+    };
   },
   methods: {
-    checkCredentails: function(payload) {
+    checkCredentials: function(payload) {
       console.log("email: ", payload.email, "\npassword: ", payload.password);
     }
   }
 };
 </script>
+
 
 <style lang="scss">
 </style>

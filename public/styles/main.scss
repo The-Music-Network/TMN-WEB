@@ -62,8 +62,17 @@ $secondary-color: #ffffff;
   max-width: 100%;
 }
 
+.tmn-col-6-m {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 .tmn-input {
   border-radius: 3px;
+  padding: 5px 10px;
+  background: #fff;
+  margin-bottom: 15px;
 }
 
 .center-text {
