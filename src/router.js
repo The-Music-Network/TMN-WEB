@@ -7,6 +7,7 @@ Vue.use(Router);
 export default function buildRouter() {
   return new Router({
     mode: "history",
+
     routes: [{ path: "/", component: Home }]
   });
 }
