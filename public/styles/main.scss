@@ -6,6 +6,75 @@ $primary-color: #61dafb;
 $secondary-color: #ffffff;
 
 .nav {
-    height: 10%;
-    color: $primary-color;
+  height: 10%;
+  color: $primary-color;
+}
+
+.tmn-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .tmn-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tmn-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tmn-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tmn-container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.tmn-col-12-m {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.tmn-col-6-m {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.tmn-input {
+  border-radius: 3px;
+  padding: 5px 10px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.center-text {
+  text-align: center;
 }
