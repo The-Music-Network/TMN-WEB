@@ -9,11 +9,13 @@ const renderer = require("vue-server-renderer").createRenderer({
 });
 
 app.use("./dist", express.static(path.join(__dirname, "./dist")));
-app.use("./dist", express.static(path.join(__dirname, "./client")));
+app.use("./client", express.static(path.join(__dirname, "./client")));
 
 app.get("*", (req, res) => {
-  bundle.default({ url: req.url }).then(
-    app => {
+  console.log(bundle.default);
+  bundle
+    .default(req.url)
+    .then(app => {
       const context = {
         title: "The Music Network",
         meta: `
@@ -21,22 +23,23 @@ app.get("*", (req, res) => {
             `
       };
 
-      renderer.renderToString(app, context, (err, html) => {
-        if (err) {
+      renderer
+        .renderToString(app, context)
+        .then(html => {
+          res.end(html);
+        })
+        .catch(err => {
+          console.error("Render Error: ", err);
           if (err.code === 404) {
             res.status(404).end("Page not found");
           } else {
             res.status(500).end("Internal Server Error");
           }
-        } else {
-          res.end(html);
-        }
-      });
-    },
-    err => {
-      console.error("err: ", err);
-    }
-  );
+        });
+    })
+    .catch(err => {
+      console.error("Bundle Error: ", err);
+    });
 });
 
 app.listen(8080);
