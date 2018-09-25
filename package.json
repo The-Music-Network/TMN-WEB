@@ -71,8 +71,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm run start && npm test"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }

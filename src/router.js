@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Profile from "pages/Profile.vue";
-import Landing from "pages/Landing/Landing.vue";
+import Landing from "pages/Landing.vue";
 
 Vue.use(Router);
 
