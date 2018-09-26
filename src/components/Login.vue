@@ -1,37 +1,35 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <form @submit-prevent="submitLogin">
-            <div class="row">
-                <div class="col-12">
-                    <div class="login-panel">
-                      <h3>Login</h3>
-                    </div> 
-                </div>
+  <div class="row">
+    <div class="col-6">
+      <form @submit-prevent="submitLogin">
+        <div class="row">
+            <div class="col-12">
+                <div class="login-panel">
+                  <h3>Login</h3>
+                </div> 
             </div>
-            <div class="row">
-                <div class="col-12-m">
-                    <input ref="emailText" type="text" class="input" v-bind:class="[emailSuccess]" name="username" placeholder="Email/Username" @input="validateEmail" autofocus required />
-                    <span><i v-bind:class="[emailIcon]"></i></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <input ref="passwordText" type="password" class="input" v-bind:class="[passwordSuccess]" name="password" placeholder="Password" @input="validatePassword" pattern=".{6,25}" required />
-                    <span><i v-bind:class="[passwordIcon]"></i></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="error" v-if="errorMessage">{{errorMessage}}</span>
-                    <button class="btn" :disabled="submitDisabled">Sign In</button>
-                </div>
-            </div>
-          </form>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-12">
+                <input ref="emailText" type="text" class="input" v-bind:class="[emailSuccess]" name="username" placeholder="Email/Username" @input="validateEmail" autofocus required />
+                <span><i v-bind:class="[emailIcon]"></i></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input ref="passwordText" type="password" class="input" v-bind:class="[passwordSuccess]" name="password" placeholder="Password" @input="validatePassword" pattern=".{6,25}" required />
+                <span><i v-bind:class="[passwordIcon]"></i></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <span class="error" v-if="errorMessage">{{errorMessage}}</span>
+                <button class="btn" :disabled="submitDisabled">Sign In</button>
+            </div>
+        </div>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -89,9 +87,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import "styles/font-awesome/scss/_variables.scss";
-@import "styles/index.scss";
 
 .login-panel {
   position: relative;
