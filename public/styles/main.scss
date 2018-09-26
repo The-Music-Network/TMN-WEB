@@ -11,6 +11,7 @@ $secondary-color: #282c34;
 }
 
 .container {
+  height: 100%;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -43,8 +44,10 @@ $secondary-color: #282c34;
 }
 
 .row {
+  flex-direction: row;
   display: -ms-flexbox;
   display: flex;
+  flex: 1;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -52,11 +55,14 @@ $secondary-color: #282c34;
 }
 
 .col {
+  display: flex;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  position: relative;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &-12 {
     -ms-flex: 0 0 100%;

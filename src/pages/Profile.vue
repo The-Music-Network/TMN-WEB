@@ -1,11 +1,13 @@
 <template>
-   <div class="container">
-    <div class="profile--main-pic row">
-        <div class="col-3 center-text profile--left">
-            
+   <div>
+    <div class="row">
+        <div class="col-6 center-text">
+            <div class="profile--left">
+                 Make stuff happen
+            </div>
         </div>
-        <div class="col-9 center-text">
-            Profile
+        <div class="col-6 center-text">
+            Test
         </div>
     </div>
    </div>
