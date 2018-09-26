@@ -91,6 +91,8 @@ export default {
 
 <style lang="scss">
 @import "styles/font-awesome/scss/_variables.scss";
+@import "styles/index.scss";
+
 .login-panel {
   position: relative;
   display: -ms-flexbox;
