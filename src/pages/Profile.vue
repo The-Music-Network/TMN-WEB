@@ -1,11 +1,11 @@
 <template>
-   <div class="tmn-container">
+   <div class="container">
     <div class="profile--main-pic row">
-        <div class="col-3 center-text">
-            Hello
+        <div class="col-3 center-text profile--left">
+            
         </div>
         <div class="col-9 center-text">
-            World
+            Profile
         </div>
     </div>
    </div>
@@ -16,6 +16,9 @@ export default {};
 <style lang="scss">
 @import "styles/index.scss";
 
-.profile--main-pic {
+.profile {
+  &--left {
+    background-color: $secondary-color;
+  }
 }
 </style>
