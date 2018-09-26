@@ -4,10 +4,7 @@
     </div>
 </template>
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
-<style lang="scss">
-    @import "styles/index.scss"
+<style lang="scss" scoped>
 </style>
