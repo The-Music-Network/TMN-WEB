@@ -3,9 +3,12 @@
     <div class="row">
         <div class="col">
             <div class="profile--left">
-                 <div class="profile--img">
+                <div class="profile--img">
                     <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
-                 </div>
+                </div>
+                <a class="btn btn-primary">
+                    Follow
+                </a>
             </div>
         </div>
         <div class="col-9">
@@ -15,11 +18,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-9 text-center">
-                    Feed
-                </div>
-                <div class="col-3 text-center">
-                    Suggestions
+                <div class="nav nav-elegant">
+                    <nav>
+                        <a>Music</a>
+                        <a>Playlists</a>
+                        <a>Followers</a>
+                        <a>Following</a>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -36,6 +41,7 @@ export default {};
   &--left {
     background-color: $light-secondary-color;
     height: 93vh;
+    text-align: center;
   }
 
   &--img img {
