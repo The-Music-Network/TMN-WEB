@@ -6,10 +6,35 @@
 $primary-color: #61dafb;
 $secondary-color: #282c34;
 $light-secondary-color: #726f6d;
+$dark-secondary-color: #4e4c4a;
 
 .nav {
-  height: 10%;
-  color: $primary-color;
+  color: $secondary-color;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 3px solid $light-secondary-color;
+
+  &-elegant a:hover {
+    width: 10px;
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color !important;
+  }
+
+  &-elegant a:active {
+    width: 10px;
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color !important;
+  }
+
+  &-link {
+    text-align: center;
+  }
+
+  & a {
+    padding-bottom: 12px;
+    margin-right: 50px;
+  }
 }
 
 .input {
@@ -17,4 +42,20 @@ $light-secondary-color: #726f6d;
   padding: 5px 10px;
   background: #fff;
   margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px;
+  text-align: center;
+  color: white !important;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px $dark-secondary-color;
+
+  &-primary {
+    background-color: $primary-color;
+
+    &:hover {
+      box-shadow: 5px 3px 2px $dark-secondary-color;
+    }
+  }
 }
