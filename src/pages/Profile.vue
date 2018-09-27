@@ -1,12 +1,12 @@
 <template>
    <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-3">
             <div class="profile--left">
                 <div class="profile--img">
                     <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
                 </div>
-                <a class="btn btn-primary">
+                <a class="btn btn--primary">
                     Follow
                 </a>
             </div>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="nav nav-elegant">
+                <div class="nav nav--elegant">
                     <nav>
                         <a>Music</a>
                         <a>Playlists</a>
@@ -31,9 +31,11 @@
     </div>
    </div>
 </template>
+
 <script>
 export default {};
 </script>
+
 <style lang="scss">
 @import "styles/index.scss";
 
@@ -45,6 +47,7 @@ export default {};
   }
 
   &--img img {
+    position: relative;
     height: 200px;
     width: 200px;
     display: block;
