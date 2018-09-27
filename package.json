@@ -70,6 +70,8 @@
     "vue-server-renderer": "^2.5.17"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
