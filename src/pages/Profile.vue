@@ -3,17 +3,31 @@
     <div class="row">
         <div class="col-3">
             <div class="profile--left">
-                <div class="profile--img">
-                    <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
+                <div class="row">
+                    <div class="col">
+                        <a class="btn btn--primary profile--follow-button">
+                            Follow
+                        </a>
+                    </div>
                 </div>
-                <a class="btn btn--primary">
-                    Follow
-                </a>
+                <div class="row">
+                    <div class="col">
+                        <div class="profile--img">
+                            <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-9">
             <div class="row">
                 <div class="profile--banner">
+                <div class="row">
+                    <div class="profile--organization">Octobers Very Own</div>
+                    </div>
+                    <div class="row">
+                        <div class="profile--followers">20,000 Followers</div>
+                    </div>
                     <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
                 </div>
             </div>
@@ -40,6 +54,12 @@ export default {};
 @import "styles/index.scss";
 
 .profile {
+  &--follow-button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+  }
+
   &--left {
     background-color: $light-secondary-color;
     height: 93vh;
@@ -47,7 +67,6 @@ export default {};
   }
 
   &--img img {
-    position: relative;
     height: 200px;
     width: 200px;
     display: block;
@@ -58,11 +77,33 @@ export default {};
   }
 
   &--banner {
+    background-color: $light-secondary-color;
+    padding: 20px;
     & img {
       height: 25vh;
       width: 100%;
       object-fit: cover;
     }
+  }
+
+  &--organization {
+    position: absolute;
+    right: 5%;
+    margin-top: 20px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
+  }
+
+  &--followers {
+    position: absolute;
+    left: 5%;
+    margin-top: 20px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 6px;
+    border-radius: 5px;
   }
 }
 </style>
