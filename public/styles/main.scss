@@ -15,13 +15,13 @@ $dark-secondary-color: #4e4c4a;
   width: 100%;
   border-bottom: 3px solid $light-secondary-color;
 
-  &-elegant a:hover {
+  &--elegant a:hover {
     width: 10px;
     border-bottom: 3px solid $primary-color;
     color: $primary-color !important;
   }
 
-  &-elegant a:active {
+  &--elegant a:active {
     width: 10px;
     border-bottom: 3px solid $primary-color;
     color: $primary-color !important;
@@ -51,7 +51,7 @@ $dark-secondary-color: #4e4c4a;
   border-radius: 5px;
   box-shadow: 1px 2px 2px $dark-secondary-color;
 
-  &-primary {
+  &--primary {
     background-color: $primary-color;
 
     &:hover {
