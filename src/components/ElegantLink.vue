@@ -10,7 +10,6 @@ export default {
   },
   methods: {
     setActive() {
-      console.log(this.$store.state.elegantNav);
       this.$store.commit("setTab", this.text);
     }
   },
