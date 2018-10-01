@@ -10,7 +10,8 @@ export default {
   },
   methods: {
     setActive() {
-      this.isActive = !this.isActive;
+      this.$store.commit("changeTab", this.$slots.default[0].text);
+      console.log(this.$store.state.profile.currentTab);
     }
   }
 };
