@@ -1,17 +1,22 @@
 <template>
-    <a @click="setActive"><slot></slot></a>
+    <a v-bind:class="{ active: isActive }" @click="setActive"><slot></slot></a>
 </template>
 <script>
 export default {
   data() {
     return {
-      isActive: false
+      text: this.$slots.default[0].text
     };
   },
   methods: {
     setActive() {
-      this.$store.commit("changeTab", this.$slots.default[0].text);
-      console.log(this.$store.state.profile.currentTab);
+      console.log(this.$store.state.elegantNav);
+      this.$store.commit("setTab", this.text);
+    }
+  },
+  computed: {
+    isActive() {
+      return this.$store.state.elegantNav.active[this.text];
     }
   }
 };
