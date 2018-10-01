@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="profile--img">
-                            <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
+                            <img src="~images/drake_icon.jpg">
                         </div>
                     </div>
                 </div>
@@ -28,18 +28,11 @@
                     <div class="row">
                         <div class="profile--followers">20,000 Followers</div>
                     </div>
-                    <img src="https://www.bristolgate.com/wp-content/uploads/2018/09/orionthemes-placeholder-image.png">
+                    <img src="~images/drake_banner.jpg">
                 </div>
             </div>
             <div class="row">
-                <div class="nav nav--elegant">
-                    <nav>
-                        <a>Music</a>
-                        <a>Playlists</a>
-                        <a>Followers</a>
-                        <a>Following</a>
-                    </nav>
-                </div>
+                <elegant-nav></elegant-nav>
             </div>
         </div>
     </div>
@@ -47,7 +40,13 @@
 </template>
 
 <script>
-export default {};
+import ElegantNav from "components/ElegantNav.vue";
+
+export default {
+  components: {
+    ElegantNav
+  }
+};
 </script>
 
 <style lang="scss">
@@ -67,8 +66,8 @@ export default {};
   }
 
   &--img img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     display: block;
     margin: 0 auto;
     padding: 20px;
@@ -83,6 +82,7 @@ export default {};
       height: 25vh;
       width: 100%;
       object-fit: cover;
+      object-position: 0 0;
     }
   }
 

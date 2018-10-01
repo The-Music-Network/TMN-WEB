@@ -21,7 +21,7 @@ $dark-secondary-color: #4e4c4a;
     color: $primary-color !important;
   }
 
-  &--elegant a:active {
+  &--elegant a.active {
     width: 10px;
     border-bottom: 3px solid $primary-color;
     color: $primary-color !important;
