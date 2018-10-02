@@ -15,18 +15,6 @@ $dark-secondary-color: #4e4c4a;
   width: 100%;
   border-bottom: 3px solid $light-secondary-color;
 
-  &--elegant a:hover {
-    width: 10px;
-    border-bottom: 3px solid $primary-color;
-    color: $primary-color !important;
-  }
-
-  &--elegant a.active {
-    width: 10px;
-    border-bottom: 3px solid $primary-color;
-    color: $primary-color !important;
-  }
-
   &-link {
     text-align: center;
   }
