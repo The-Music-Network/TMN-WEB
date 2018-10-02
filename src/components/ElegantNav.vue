@@ -17,5 +17,21 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
+@import "styles/index.scss";
+
+.nav {
+  &--elegant a:hover {
+    width: 10px;
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color !important;
+  }
+
+  .active {
+    width: 10px;
+    border-bottom: 3px solid $primary-color;
+    color: $primary-color !important;
+  }
+}
 </style>
