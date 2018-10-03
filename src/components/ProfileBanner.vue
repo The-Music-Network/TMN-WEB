@@ -4,7 +4,7 @@
             <div class="profile--organization">Octobers Very Own</div>
         </div>
         <div class="row">
-            <div class="profile--followers">20,000 Followers</div>
+            <div class="profile--followers">20,194,857 Followers</div>
         </div>
         <img src="~images/drake_banner.jpg">
     </div>
