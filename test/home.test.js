@@ -4,6 +4,6 @@ describe("Testing the home page", function() {
   this.timeout(0);
 
   it("should load", async function() {
-    return await kermit.goto("http://twitter.com");
+    return await kermit.goto("http://localhost:8080");
   });
 });
