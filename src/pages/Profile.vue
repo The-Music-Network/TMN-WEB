@@ -11,7 +11,10 @@
             <div class="row">
                 <elegant-nav></elegant-nav>
             </div>
-        </div>
+            <div class="row">
+                <Track></Track>
+            </div>
+        </div> 
     </div>
    </div>
 </template>
@@ -20,12 +23,14 @@
 import ElegantNav from "components/ElegantNav.vue";
 import ProfileBanner from "components/ProfileBanner.vue";
 import ProfileData from "components/ProfileData.vue";
+import Track from "components/Track.vue";
 
 export default {
   components: {
     ElegantNav,
     ProfileBanner,
-    ProfileData
+    ProfileData,
+    Track
   }
 };
 </script>

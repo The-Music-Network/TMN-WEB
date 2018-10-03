@@ -5,6 +5,7 @@ import store from "./store";
 
 export default function buildApp() {
   const router = buildRouter();
+
   const app = new Vue({
     store,
     router,
